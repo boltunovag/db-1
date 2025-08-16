@@ -1,0 +1,11 @@
+CREATE USER 'sys_temp'@'%' IDENTIFIED BY '88888888';
+ALTER USER 'sys_temp'@'%' IDENTIFIED WITH mysql_native_password BY '88888888';
+GRANT ALL PRIVILEGES ON *.* TO 'sys_temp'@'%';
+FLUSH PRIVILEGES;
+SHOW GRANTS FOR 'sys_temp'@'%';
+SELECT user,host FROM mysql.user;
+SOURCE /sakila-db/sakila-schema.sql;
+SOURCE /sakila-db/sakila-dataa.sql;
+SHOW DATABASES;
+USE sakila;
+SHOW TABLES;
